@@ -1,4 +1,9 @@
 spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
   application:
     name: bounce
   config:
@@ -12,6 +17,13 @@ spring:
     password: ${mysql.password}
 
 mybatis:
+  classpath:
   mapper-locations: mappers/*Mapper.xml
   configuration:
     map-underscore-to-camel-case: true
+
+    spring:
+      jpa:
+        hibernate:
+          ddl-auto: none
+        show-sql: false
