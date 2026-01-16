@@ -177,3 +177,76 @@ body {
 .footer-links a:hover {
     text-decoration: underline;  /* 마우스 올리면 밑줄 생기게 */
 }
+
+/* =========================================
+   회원가입(Join) 페이지 전용 스타일
+   ========================================= */
+
+/* 1. 회원가입 카드 (로그인 카드보다 세로로 김) */
+.join-card {
+    display: flex;
+    width: 550px;
+    min-height: 350px; /* 최소 높이 설정 */
+    height: auto;      /* 내용물에 따라 늘어남 */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* 2. 회원가입 콘텐츠 영역 (입력창들) */
+.join-content-section {
+    flex: 2;
+    padding: 30px 20px; /* 위아래 여백을 넉넉하게 */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* 각 입력창 사이 간격 */
+    justify-content: center;
+}
+
+/* 3. 아이디 + 중복확인 버튼을 감싸는 가로 박스 */
+.input-group-row {
+    display: flex;
+    gap: 8px;
+    height: 45px; /* 입력창 높이와 동일하게 */
+}
+
+/* 중복확인 버튼 */
+.check-btn {
+    width: 80px;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #1a3a4a;
+    color: #1a3a4a;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.check-btn:hover {
+    background-color: #1a3a4a;
+    color: white;
+}
+
+/* 4. 회원가입 완료 버튼 */
+.join-btn {
+    width: 100%;
+    height: 50px; /* 조금 더 크게 강조 */
+    margin-top: 10px; /* 위쪽 입력창들과 거리두기 */
+    background-color: #1a3a4a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.join-btn:hover {
+    background-color: #2c5a71;
+}
+
+/* (참고) .logo-section은 기존 로그인 페이지 CSS를 그대로 공유합니다. */
